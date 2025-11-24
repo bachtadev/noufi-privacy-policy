@@ -4,87 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NOUFI – Privacy Policy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --purple: #9C27B0;
       --pink: #E91E63;
+      --coral: #FF4081;
       --blue: #2196F3;
-      --gradient: linear-gradient(135deg, #9C27B0, #E91E63, #2196F3);
+      --teal: #00BCD4;
+      --yellow: #FFEB3B;
+      --dark: #121212;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #121212;
+      background: var(--dark);
       color: #ffffff;
       min-height: 100vh;
-      background-image: 
-        radial-gradient(circle at 10% 20%, rgba(156, 39, 176, 0.3) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(233, 30, 99, 0.3) 0%, transparent 20%),
-        radial-gradient(circle at 50% 50%, rgba(33, 150, 243, 0.2) 0%, transparent 30%);
+      background-image:
+        radial-gradient(circle at 15% 25%, rgba(156, 39, 176, 0.4) 0%, transparent 25%),
+        radial-gradient(circle at 85% 70%, rgba(233, 30, 99, 0.4) 0%, transparent 25%),
+        radial-gradient(circle at 50% 50%, rgba(33, 150, 243, 0.25) 0%, transparent 35%);
+      overflow-x: hidden;
     }
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 30px 20px;
     }
     header {
       text-align: center;
-      margin-bottom: 50px;
-      padding: 40px 0;
-      background: var(--gradient);
-      border-radius: 30px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      margin-bottom: 60px;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, var(--purple), var(--pink), var(--blue));
+      border-radius: 40px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+      position: relative;
+      overflow: hidden;
     }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: repeating-concentric-circles;
+      background-image: 
+        radial-gradient(circle, transparent 20%, rgba(255,255,255,0.05) 21%, transparent 22%),
+        radial-gradient(circle, transparent 15%, rgba(255,255,255,0.03) 16%, transparent 17%);
+      animation: float 20s infinite linear;
+      opacity: 0.3;
+    }
+    @keyframes float { 0% { transform: translate(0,0) rotate(0deg); } 100% { transform: translate(30px, -30px) rotate(360deg); } }
+    
     h1 {
       font-family: 'Fredoka One', cursive;
-      font-size: 4rem;
-      background: linear-gradient(90deg, #fff, #ffeb3b);
+      font-size: 5.5rem;
+      background: linear-gradient(90deg, #FFFFFF, var(--yellow), #FFFFFF);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 10px;
+      text-shadow: 0 0 30px rgba(255,235,59,0.5);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
     }
-    .subtitle {
-      font-size: 1.4rem;
-      opacity: 0.9;
+    .tagline {
+      font-size: 1.6rem;
+      font-weight: 600;
+      opacity: 0.95;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 2;
     }
     main {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(10px);
-      border-radius: 25px;
-      padding: 40px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(12px);
+      border-radius: 30px;
+      padding: 45px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.12);
     }
     h2 {
       font-family: 'Fredoka One', cursive;
-      color: #ffeb3b;
-      font-size: 2.2rem;
-      margin: 40px 0 20px;
+      color: var(--yellow);
+      font-size: 2.4rem;
       text-align: center;
+      margin: 50px 0 25px;
+      text-shadow: 0 0 15px rgba(255,235,59,0.4);
     }
     p, li {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      margin-bottom: 16px;
-      color: #e0e0e0;
+      font-size: 1.18rem;
+      line-height: 1.9;
+      margin-bottom: 18px;
+      color: #e8e8e8;
     }
-    ul { padding-left: 30px; margin-bottom: 20px; }
-    strong { color: #ffeb3b; }
-    a { color: #64B5F6; text-decoration: underline; }
+    ul { padding-left: 32px; margin: 20px 0; }
+    strong { color: var(--yellow); font-weight: 600; }
+    a { color: #64B5F6; text-decoration: underline; font-weight: 500; }
+    .highlight {
+      background: rgba(255,235,59,0.15);
+      padding: 16px 20px;
+      border-radius: 16px;
+      border-left: 5px solid var(--yellow);
+      margin: 25px 0;
+      font-weight: 500;
+    }
     .footer {
       text-align: center;
-      margin-top: 60px;
-      padding: 30px;
-      font-size: 1.1rem;
-      opacity: 0.8;
+      margin-top: 80px;
+      padding: 40px;
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
-    .heart { color: #E91E63; }
+    .heart { color: #E91E63; font-size: 1.4em; }
     @media (max-width: 768px) {
-      h1 { font-size: 3rem; }
-      .container { padding: 20px 15px; }
-      main { padding: 25px; }
+      h1 { font-size: 3.8rem; }
+      .tagline { font-size: 1.3rem; }
+      header { padding: 40px 15px; border-radius: 25px; }
+      main { padding: 30px 20px; border-radius: 20px; }
+      h2 { font-size: 2rem; }
     }
   </style>
 </head>
@@ -92,66 +130,70 @@
   <div class="container">
     <header>
       <h1>NOUFI</h1>
-      <p class="subtitle">Privacy Policy — We collect almost nothing</p>
+      <p class="tagline">Privacy Policy — Your Data Stays Yours</p>
     </header>
 
     <main>
-      <p style="text-align:center;font-size:1.4rem;margin-bottom:40px;">
+      <p style="text-align:center; font-size:1.5rem; margin-bottom:50px; opacity:0.9;">
         Last updated: November 2025
       </p>
 
-      <h2>1. Introduction</h2>
-      <p>Welcome to <strong>NOUFI</strong> — the fun, offline-first multiplayer trivia game!</p>
-      <p>We respect your privacy and designed the entire app so that you can play without ever giving us personal information.</p>
+      <h2>1. We Collect Almost Nothing</h2>
+      <p>NOUFI is designed from the ground up to respect your privacy. We do <strong>not</strong> require any account, login, or personal information to play.</p>
+      
+      <div class="highlight">
+        The only data that ever leaves your phone is related to ads (via Google AdMob).<br>
+        Everything else — scores, teams, questions — stays 100% on your device.
+      </div>
 
-      <h2>2. We Do NOT Collect Personal Data</h2>
-      <p>NOUFI does <strong>not</strong> require any account, login, or sign-up.</p>
-      <p>We never collect or store:</p>
+      <h2>2. Local Data (Never Sent Anywhere)</h2>
+      <p>We store the following only on your phone:</p>
       <ul>
-        <li>Your name, email, or phone number</li>
-        <li>Location, contacts, photos, or files</li>
-        <li>Any personally identifiable information</li>
+        <li>Team names, avatars, and scores</li>
+        <li>Game settings and progress</li>
+        <li>Downloaded trivia questions (using secure local storage)</li>
       </ul>
+      <p>This data is automatically deleted when you uninstall the app.</p>
 
-      <h2>3. What We Do Collect (Very Little)</h2>
-      <p><strong>Local data only (on your phone):</strong></p>
+      <h2>3. Advertising (Google AdMob)</h2>
+      <p>To keep NOUFI free, we show non-intrusive banner and interstitial ads powered by Google AdMob.</p>
+      <p>AdMob may automatically collect:</p>
       <ul>
-        <li>Team names, avatars, scores, selected themes</li>
-        <li>Downloaded trivia questions (stored safely with Hive)</li>
-      </ul>
-      <p>All of this stays on your device and is deleted when you uninstall the app.</p>
-
-      <p><strong>Ads (Google AdMob):</strong></p>
-      <p>We show a few non-intrusive ads to keep the game free. Google AdMob may automatically collect:</p>
-      <ul>
-        <li>Advertising ID (you can reset it anytime)</li>
-        <li>Device type & OS version</li>
+        <li>Advertising ID (resettable in your device settings)</li>
+        <li>Device model and OS version</li>
+        <li>IP address and general location (country level)</li>
         <li>Ad interaction data</li>
       </ul>
       <p>Google’s privacy policy applies: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
-      <p>You can turn off personalized ads in your phone settings → Google → Ads → Opt out of Ads Personalization.</p>
+      <p>You can disable personalized ads anytime: Settings → Google → Ads → Opt out of Ads Personalization</p>
 
       <h2>4. Fully Offline After First Launch</h2>
-      <p>The first time you open NOUFI, we download all questions and save them locally. After that the game works <strong>100% offline</strong> — no internet needed, no data sent.</p>
+      <p>On first launch, NOUFI downloads all questions and saves them locally. After that, the game works <strong>completely offline</strong> — no internet or data collection required.</p>
 
-      <h2>5. Children’s Privacy</h2>
-      <p>NOUFI is family-friendly and safe for all ages. Because we collect zero personal information, we fully comply with COPPA and children’s privacy laws worldwide.</p>
+      <h2>5. Third-Party Services</h2>
+      <p>The only third-party service we use is <strong>Google AdMob</strong> for advertisements. We do not use analytics, crash reporting, or any other tracking tools.</p>
 
-      <h2>6. Security & Your Rights</h2>
-      <p>All your game data is stored securely on your device only. You can:</p>
+      <h2>6. Data Security</h2>
+      <p>All local data is stored securely on your device using encrypted storage. We never have access to your gameplay data.</p>
+
+      <h2>7. Your Rights</h2>
+      <p>You can:</p>
       <ul>
-        <li>Delete everything → just uninstall the app</li>
+        <li>Delete all data → Uninstall the app</li>
         <li>Reset your advertising ID in Android settings</li>
-        <li>Opt out of personalized ads anytime</li>
+        <li>Disable personalized ads in your device settings</li>
       </ul>
 
-      <h2>7. Contact Us</h2>
-      <p>Questions? Ideas? We’d love to hear from you!</p>
+      <h2>8. Changes to This Policy</h2>
+      <p>We may update this policy occasionally. The latest version will always be available at this link.</p>
+
+      <h2>9. Contact Us</h2>
+      <p>Questions or feedback? We’d love to hear from you!</p>
       <p>Email: <strong>noufi.dev@gmail.com</strong><br>Developer: Malek B.</p>
 
       <div class="footer">
         Thank you for playing NOUFI!<br>
-        Made with <span class="heart">♥</span> for trivia lovers everywhere
+        Made with <span class="heart">♥</span> in Tunisia
       </div>
     </main>
   </div>
